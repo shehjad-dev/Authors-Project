@@ -1,0 +1,220 @@
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+button {
+  font-size: calc(10px + 2vmin);
+}
+ */
+
+body,
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  margin: 2px;
+}
+
+.whole {
+  display: flex;
+}
+.navBar {
+  background-color: rgb(212, 233, 255);
+  border: 1.2px solid rgb(0, 127, 253);
+  border-radius: 10px;
+  padding: 6px 8px;
+  color: white;
+  font-size: 16px;
+  position: relative;
+}
+
+.navBar nav {
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+}
+.navBar a {
+  background-color: rgb(113, 180, 243);
+  padding: 6px 8px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.ListBox {
+  background-color: rgb(212, 233, 255);
+  min-width: 60vw;
+  border-radius: 10px;
+  border: 1.2px solid dodgerblue;
+  margin-left: 2px;
+  min-height: 90vh;
+  position: relative;
+  padding: 8px;
+}
+
+.authorCardBox {
+  background-color: white;
+  border-radius: 4px;
+  border: 1.1px solid dodgerblue;
+  position: relative;
+  padding: 20px;
+  padding-right: 60px;
+  min-height: 140px;
+}
+
+.authorCardBox button {
+  padding: 6px 8px;
+  cursor: pointer;
+  border-radius: 6px;
+  width: 80px;
+  outline: none;
+  /* border: none; */
+  font-weight: bold;
+  font-size: 16px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: all 0.3s;
+}
+
+.addBtn {
+  background-color: rgb(148, 236, 6);
+  border: 1.4px solid green;
+}
+.addBtn:hover {
+  background-color: rgb(166, 250, 40);
+}
+
+.removeBtn {
+  background-color: #fb6776;
+  border: 1.4px solid red;
+}
+.removeBtn:hover {
+  background-color: #ff8f9a;
+}
+
+.paginationBox {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.paginationBox button {
+  background-color: rgb(79, 167, 255);
+  color: black;
+  font-weight: bold;
+  outline: none;
+  padding: 6px 8px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.paginationBox button:hover {
+  background-color: dodgerblue;
+}
+
+.loader-container {
+  position: absolute;
+  background-color: rgb(212, 233, 255);
+  /* width: 100%;
+  height: 100%; */
+}
+.lds-ripple {
+  /* display: inline-block; */
+  /* position: relative; */
+
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  margin-left: 300px;
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid rgb(146, 43, 43);
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 450px 450px;
+  grid-gap: 10px;
+}
+
+.homePageContainer > div {
+  background-color: rgb(242, 249, 255);
+  color: black;
+  font-size: 18px;
+  padding: 6px;
+  font-weight: bold;
+  border: 2px solid dodgerblue;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
