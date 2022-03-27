@@ -24,7 +24,7 @@ const AuthorsList = () => {
     }
   };
   useLayoutEffect(() => {
-    let localStorageArr = { ...JSON.parse(localStorage.getItem("items")) }.data;
+    let localStorageArr = JSON.parse(localStorage.getItem("items")).data;
     setFavList([...localStorageArr]);
   }, []);
   useEffect(() => {
