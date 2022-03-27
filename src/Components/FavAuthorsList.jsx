@@ -6,8 +6,15 @@ const FavAuthorsList = () => {
   const { favList, setFavList } = useContext(FavAuthorsContext);
 
   useEffect(() => {
-    let localStorageArr = JSON.parse(localStorage.getItem("items")).data;
+    let localStorageArr = [];
+    if (localStorage.getItem("items") === null) {
+      localStorageArr = [];
+    } else {
+      let localStorageData = JSON.parse(localStorage.getItem("items"));
+      localStorageArr = localStorageData.data;
+    }
     setFavList([...localStorageArr]);
+    //console.log(JSON.parse(localStorage.getItem("items")).data);
   }, []);
 
   return (

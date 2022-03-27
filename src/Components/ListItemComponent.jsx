@@ -50,12 +50,16 @@ const ListItemComponent = ({ value, id }) => {
       localStorageArr.splice(itemIndex, 1);
     }
     setFavList(oldArr);
-    localStorage.setItem(
-      "items",
-      JSON.stringify({
-        data: [...localStorageArr],
-      })
-    );
+    if (localStorageArr.length > 0) {
+      localStorage.setItem(
+        "items",
+        JSON.stringify({
+          data: [...localStorageArr],
+        })
+      );
+    } else {
+      localStorage.clear();
+    }
   };
   return (
     <div className="authorCardBox">

@@ -23,8 +23,14 @@ const AuthorsList = () => {
       setCurrentPage(1);
     }
   };
-  useLayoutEffect(() => {
-    let localStorageArr = JSON.parse(localStorage.getItem("items")).data;
+  useEffect(() => {
+    let localStorageArr = [];
+    if (localStorage.getItem("items") === null) {
+      localStorageArr = [];
+    } else {
+      let localStorageData = JSON.parse(localStorage.getItem("items"));
+      localStorageArr = localStorageData.data;
+    }
     setFavList([...localStorageArr]);
   }, []);
   useEffect(() => {
